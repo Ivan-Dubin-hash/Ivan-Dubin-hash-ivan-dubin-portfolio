@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Dubin</title>
+    <style id="theme-style">
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 2em 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #4a90e2;
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 3em auto;
+        }
+
+        section {
+            margin: 3em 0;
+        }
+
+        h2 {
+            color: #4a90e2;
+            font-size: 2em;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.2em;
+            color: #555;
+            margin: 0.5em 0;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .project {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2em;
+            flex: 1 1 calc(33.333% - 30px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .project img {
+            width: 120px;
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            color: #4a90e2;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        .project a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid #4a90e2;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            margin-top: 3em;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Темная тема */
+        body.dark-mode {
+            background-color: #2d2d2d;
+            color: #f4f4f4;
+        }
+
+        body.dark-mode header {
+            background-color: #1a1a1a;
+        }
+
+        body.dark-mode nav {
+            background-color: #222;
+        }
+
+        body.dark-mode h2 {
+            color: #e74c3c;
+        }
+
+        body.dark-mode .project {
+            background-color: #333;
+            border: 1px solid #444;
+        }
+
+        body.dark-mode footer {
+            background-color: #222;
+        }
+
+        body.dark-mode footer a {
+            color: #e74c3c;
+        }
+
+        /* Мобильная адаптивность */
+        @media screen and (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ivan Dubin</h1>
+        <button id="theme-toggle" style="position: absolute; top: 20px; right: 20px; padding: 10px 15px; background-color: #4a90e2; color: white; border: none; cursor: pointer;">Switch Theme</button>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="photo_2022-05-13_22-50-06.jpg" alt="Ivan Dubin" class="profile-photo">
+            <p>Hello! I am Ivan Dubin, a passionate Web3 researcher from Russia. I enjoy working on innovative blockchain projects and exploring decentralized technologies. My experience includes community moderation and ambassador roles in prominent Web3 projects.</p>
+            <p><strong>Experience:</strong></p>
+            <ul>
+                <li><strong>Tanssi Network:</strong> Ambassador (09/2023 - Present)</li>
+                <li><strong>Linera Network:</strong> Community Moderator (05/2023 - Present)</li>
+            </ul>
+            <p>Skills: Web3 Research, SSC, JavaScript</p>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <a href="https://www.tanssi.network/" target="_blank">
+                        <img src="tanssi-logo.jpg" alt="Tanssi Network Logo">
+                        <h3>Tanssi Network</h3>
+                    </a>
+                    <p>Role: Ambassador</p>
+                    <p>Duration: 09/2023 - Present</p>
+                </div>
+                <div class="project">
+                    <a href="https://linera.io/" target="_blank">
+                        <img src="linera-logo.jpg" alt="Linera Network Logo">
+                        <h3>Linera Network</h3>
+                    </a>
+                    <p>Role: Community Moderator</p>
+                    <p>Duration: 05/2023 - Present</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:ivan.dubin.91@gmail.com">ivan.dubin.91@gmail.com</a></p>
+            <p>Twitter: <a href="https://x.com/MyskinAnton" target="_blank">@MyskinAnton</a></p>
+            <p>GitHub: <a href="https://github.com/Ivan-Dubin-hash" target="_blank">Ivan-Dubin-hash</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ivan Dubin. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Переключение между темной и светлой темой
+        const themeToggleButton = document.getElementById('theme-toggle');
+
+        themeToggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            // Сохранение состояния темы в локальном хранилище
+            const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+        });
+
+        // Применение сохраненной темы при загрузке страницы
+        window.addEventListener('load', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</body>
+</html>
